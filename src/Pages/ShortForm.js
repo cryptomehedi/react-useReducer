@@ -8,7 +8,13 @@ const ShortForm = () => {
 
     const submit = (e) => {
         e.preventDefault();
-        console.log(firstName)
+        const data = {
+            firstName,
+            lastName,
+            email,
+            password
+        }
+        console.log(data)
     }
 
     return (
@@ -19,7 +25,7 @@ const ShortForm = () => {
             <input
             type='text'
             name='name'
-            id='name'
+            id='firstName'
             onChange={e => setFirstName(e.target.value)}
             />
         </div>
@@ -28,7 +34,8 @@ const ShortForm = () => {
             <input
             type='text'
             name='name'
-            id='name'
+            id='lastName'
+            onChange={e => setLastName(e.target.value)}
             />
         </div>
         <div className='flex flex-col max-w-xs'>
@@ -36,7 +43,8 @@ const ShortForm = () => {
             <input
             type='email'
             name='name'
-            id='name'
+            id='email'
+            onChange={e => setEmail(e.target.value)}
             />
         </div>
         <div className='flex flex-col max-w-xs'>
@@ -44,7 +52,8 @@ const ShortForm = () => {
             <input
             type='password'
             name='name'
-            id='name'
+            id='password'
+            onChange={e => setPassword(e.target.value)}
             />
         </div>
         <button
